@@ -29,13 +29,8 @@ public class Main {
         e somar os de Ti para dar um valor de Q,
         contam-se as vezes que a soma foi feita para chegar ao valor
         guarda-se o contador e dá-se reset à variável*/
-        for(String num : Ti) {
-            int i=0;
-            for(String sum : Q) {
-                int s= 0;
-                c.change(parseInt(sum));
-            }
-            i++;
+        for(Qi) {
+
         }
 
         System.out.println(countarr);
