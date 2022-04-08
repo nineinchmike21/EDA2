@@ -1,48 +1,44 @@
-/*
-public class change {
-    public static int min(int m,int n){
-        int v;
-        if(m < n){
-            v=m;
-        }else{
-            v=n;
-        }
-        return v;
-    }
+//exercicio 2
+import java.io.InputStreamReader;
+import java.lang.String;
+import java.util.Arrays;
+import java.util.*;
 
-    public static void Coins(int coins){
-        int[] amount = new int[coins];
-    }
-    public static void setValues(int[] T){
-        T = new int[]{1, 5, 8,11};
-    }
+import static java.lang.Integer.parseInt;
+public class change {
+    
 
     public static int change(int amount){
-        int N = 4;
-        int[] Q= new int[amount];
-        int[] T = new int[N];
-        int[][] m= {};
-        Coins(amount);
-        setValues(T);
-        for(int q=1; q< Q.length; q++){
-            int v = Integer.MAX_VALUE;
-            for(int i = 1; i< T.length;i++){
-                if(T[i] < q){
-                    v= min(v,1+Q[q-T[i]]);
-                }
-            }Q[q] = v;
+        for(int j = 0;j<=v;j++){
+            m[j] = Integer.MAX_VALUE;
         }
+        m[0] = 0;
 
-        for(int i1= 0;i1< m.length; i1++){
-            for(int i2= 0; i2< m[i1].length;i2++){
-                System.out.println(m[i1][i2]+ "");
+        for (int q =1;q <= v;q++) {
+            for(int i = 0;i< c.length;i++){
+                if(q >= c[i] && m[q-c[i]]+1 < m[q]){
+                    m[q] = 1 + m[q-c[i]];
+                }
             }
         }
-        return Q[4];
+        return m[v];
     }
 
     public static void main(String[] args){
-        System.out.println(change(5));
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        int N = parseInt(input.readLine());
+        String c = input.readLine();
+        String[] ci = c.split(" ");
+
+        int[] T = new int[N];
+        for(int i = 0; i< ci.length;i++){
+            T[i] = Integer.parseInt(ci[i]);
+        }
+        int Q = parseInt(input.readLine());
+        //int[] m = new int[Q];
+        for(int i = 0; i< Q; i++){
+            int q  = Integer.parseInt(input.readLine());
+            System.out.println(q + ": "+"["+ change(q,T) +"]");
+        }
     }
 }
-*/
